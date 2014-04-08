@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Tappy Plane</title>
+        <style>
+            body {
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                background: url(static/img/sky.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            
+            div#phone {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -274px;
+                margin-left:-580px;
+                
+                background: url(static/img/iphone.png);
+                width: 1160px;
+                height: 548px;
+            }
+            
+            div#game {
+                position: relative;
+                left: 168px;
+                top: 42px;
+            }
+            
+        </style>
+        <script src="static/js/pixi.dev.js"></script>
+        <script src="static/js/game.js"></script>
+        <script src="static/js/keyhooks.js"></script>
+        <script src="static/js/scroller.js"></script>
+        <script src="static/js/scroller_tappy.js"></script>
+        <script src="static/js/character.js"></script>
+        <script src="static/js/player.js"></script>
+        <script src="static/js/spriteText.js"></script>
+        <script type="text/javascript">
+            function init()
+            {
+                var main = new Game(
+                    document.getElementById('game')
+                ); // Start the animation loop
+            }
+        </script>
+    </head>
+    <body onload="init();">
+        <div id="phone">
+            <div id="game"></div>
+        </div>
+	</body>
+</html>
