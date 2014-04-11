@@ -1,3 +1,9 @@
+/**
+* Scroller_tappy class
+* Author: @jelofsson
+*
+* prints the outlines of a sprite for debugging purposes
+**/
 Scroller_tappy = function(stage, canvas_w, canvas_h) {
     // Call the parent constructor
     Scroller.call(this, stage, canvas_w, canvas_h);

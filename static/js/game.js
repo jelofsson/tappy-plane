@@ -11,6 +11,7 @@ function Game(element) {
     this.WIDTH          = 826;
     this.HEIGHT         = 464; //window.innerHeight;
     this.RUNNING        = false;
+    this.STOPPED        = 0;
     // ------------------------------------
     // Pixi.js instance setup
     // ------------------------------------
@@ -48,6 +49,7 @@ function Game(element) {
 
 Game.prototype.reset = function() {
     this.RUNNING = false;
+    this.STOPPED = (new Date()).getTime();
     this.overlay.beginFill(0x9ecee0);
     this.overlay.fillAlpha = 0.5;
     this.overlay.drawRect(0,0,this.WIDTH, this.HEIGHT);
@@ -64,6 +66,7 @@ Game.prototype.start = function() {
 }
 
 Game.prototype.update = function() {
+    currTime = (new Date()).getTime();
     // Update player and map
     if(this.RUNNING) {
         this.overlay.fillAlpha = 0; // remove overlay
@@ -74,7 +77,7 @@ Game.prototype.update = function() {
         if( this.scroller.didPlayerCrash(this.player) ) {
             this.reset();
         }
-    } else if (Key.isDown(Key.SPACE)) {
+    } else if (Key.isDown(Key.SPACE) && currTime-this.STOPPED>1000 ) {
             this.start();
     }
     
