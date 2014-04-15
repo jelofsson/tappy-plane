@@ -70,28 +70,8 @@ PIXI.Player.prototype.update = function()
     
     //this.dx = 0;
     //this.dy = 0;
-    // ----------------------------------------------------
-    // !! DO NOT EDIT !!
-    // This code is copied from the MovieClip function:
-    PIXI.Sprite.prototype.updateTransform.call(this);
-
-    if(!this.playing)return;
-
-    this.currentFrame += this.animationSpeed;
-
-    var round = (this.currentFrame + 0.5) | 0;
-
-    if(this.loop || round < this.textures.length)
-    {
-        this.setTexture(this.textures[round % this.textures.length]);
-    }
-    else if(round >= this.textures.length)
-    {
-        this.gotoAndStop(this.textures.length - 1);
-        if(this.onComplete)
-        {
-            this.onComplete();
-        }
-    }
+    // !! DO NOT EDIT !! INHERIT FROM MovieClip
+    PIXI.MovieClip.prototype.updateTransform.call(this);
+    // !! DO NOT EDIT !! INHERIT FROM MovieClip
     
 }
