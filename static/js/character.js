@@ -67,7 +67,7 @@ PIXI.Character.prototype.update = function()
     this.dy = 0;
     
     // ----------------------------------------------------
-    // !! DO NOT EDIT !!
+    // !! DO NOT EDIT !! INHERIT FROM MovieClip
     // This code is copied from the MovieClip function:
     PIXI.Sprite.prototype.updateTransform.call(this);
 
@@ -89,6 +89,7 @@ PIXI.Character.prototype.update = function()
             this.onComplete();
         }
     }
+    // !! DO NOT EDIT !! INHERIT FROM MovieClip
 }
 
 /*
