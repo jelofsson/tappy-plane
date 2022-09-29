@@ -11,4 +11,4 @@ What I did
 - Application code development  
 - Using pixi.js & phonegap  
   
-Sprite resources is made by [Kenney Vleugels] (http://www.kenney.nl/)
+Sprite resources is made by [Kenney Vleugels](http://www.kenney.nl/)
