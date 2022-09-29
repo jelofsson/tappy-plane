@@ -2,6 +2,7 @@ Tappy-plane
 ===========
 
 I made a Flappy bird clone  
+  
 A total weekend project experimenting with pixi.js & phonegap   
   
 [You can try it out here](http://jelofsson.github.io/tappy-plane/)   
